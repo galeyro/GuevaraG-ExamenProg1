@@ -65,7 +65,7 @@ namespace GuevaraG_ExamenProg1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Puntos", cliente.RecompensasPuntos);
+            ViewData["RecompensaId"] = new SelectList(_context.Recompensa, "Id", "Puntos", cliente.RecompensaId);
             return View(cliente);
         }
 
@@ -82,7 +82,7 @@ namespace GuevaraG_ExamenProg1.Controllers
             {
                 return NotFound();
             }
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Nombre", cliente.RecompensasPuntos);
+            ViewData["RecompensaId"] = new SelectList(_context.Recompensa, "Id", "Nombre", cliente.RecompensaId);
             return View(cliente);
         }
 
@@ -118,7 +118,7 @@ namespace GuevaraG_ExamenProg1.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Nombre", cliente.RecompensasPuntos);
+            ViewData["RecompensaId"] = new SelectList(_context.Recompensa, "Id", "Nombre", cliente.RecompensaId);
             return View(cliente);
         }
 

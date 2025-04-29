@@ -15,8 +15,8 @@ namespace GuevaraG_ExamenProg1.Models
         public bool Descuento { get; set; }
         [DataType(DataType.Date), Required]
         public DateTime FechaNacimiento { get; set; }
-        public int RecompensasPuntos { get; set; }
-        [ForeignKey("RecompensasPuntos")]
+        public int RecompensaId { get; set; }
+        [ForeignKey("RecompensaId")]
         public Recompensa? Recompensa { get; set; }
         public ICollection<Reserva> Reservas { get; set; }
 
