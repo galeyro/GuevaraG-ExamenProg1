@@ -91,7 +91,7 @@ namespace GuevaraG_ExamenProg1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Sueldo,Descuento,FechaNacimiento,RecompensasPuntos")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Sueldo,Descuento,FechaNacimiento,RecompensaId")] Cliente cliente)
         {
             if (id != cliente.Id)
             {
