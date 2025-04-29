@@ -48,7 +48,7 @@ namespace GuevaraG_ExamenProg1.Controllers
         // GET: Clientes/Create
         public IActionResult Create()
         {
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Nombre");
+            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Puntos", "Puntos");
             return View();
         }
 
@@ -65,7 +65,7 @@ namespace GuevaraG_ExamenProg1.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Nombre", cliente.RecompensasPuntos);
+            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Puntos", cliente.RecompensasPuntos);
             return View(cliente);
         }
 
