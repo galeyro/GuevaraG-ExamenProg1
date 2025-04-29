@@ -11,6 +11,7 @@ namespace GuevaraG_ExamenProg1.Models
         public DateTime FechaEntrada { get; set; }
         [DataType(DataType.Date), Required]
         public DateTime FechaSalida { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal ValorPagar { get; set; }
         public string InfoCliente { get; set; }
         public int ClienteId { get; set; }

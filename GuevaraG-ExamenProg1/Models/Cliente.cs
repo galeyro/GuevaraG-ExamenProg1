@@ -10,6 +10,7 @@ namespace GuevaraG_ExamenProg1.Models
         [Required(ErrorMessage = "El campo Nombre es requerido.")]
         [MaxLength(50)]
         public string Nombre { get; set; }
+        [Column(TypeName = "decimal(18, 2)")]
         public decimal Sueldo { get; set; }
         public bool Descuento { get; set; }
         [DataType(DataType.Date), Required]
