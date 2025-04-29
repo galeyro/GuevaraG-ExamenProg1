@@ -11,7 +11,13 @@ namespace GuevaraG_ExamenProg1.Models
         [DataType(DataType.Date), Required]
         public DateTime FechaInicio { get; set; }
         public int Puntos { get; set; }
-        public string Tipo { get; set; }
+        public string Tipo
+        {
+            get
+            {
+                return Puntos <=500 ? "SILVER" : "GOLD";
+            }
+        }
 
     }
 }

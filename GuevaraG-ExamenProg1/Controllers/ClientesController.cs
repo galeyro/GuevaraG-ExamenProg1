@@ -48,7 +48,7 @@ namespace GuevaraG_ExamenProg1.Controllers
         // GET: Clientes/Create
         public IActionResult Create()
         {
-            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Puntos", "Puntos");
+            ViewData["RecompensasPuntos"] = new SelectList(_context.Recompensa, "Id", "Puntos");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace GuevaraG_ExamenProg1.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Sueldo,Descuento,FechaNacimiento,RecompensasPuntos")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Sueldo,Descuento,FechaNacimiento,RecompensaId")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
