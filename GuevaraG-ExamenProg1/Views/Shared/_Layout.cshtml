@@ -34,6 +34,16 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        <div>
+            <input type="text" id="miTexto" placeholder="Escribe algo aqui" />
+            <button onClick="mostrarTexto()" type="button" class="btn btn-outline-info">Enviar</button>
+            <script>
+                function mostrarTexto() {
+                    var texto = document.getElementById("miTexto").value;
+                    alert("Mi nombre es Galo, mi hobbie es jugar futbol y el valor de mi campo es: " + texto);
+                }
+            </script>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">
