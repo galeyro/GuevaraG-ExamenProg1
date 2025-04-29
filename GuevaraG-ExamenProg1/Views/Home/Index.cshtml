@@ -9,4 +9,16 @@
          width="400" height="500"
          class="img-fluid"
          alt="Responsive image">
+    <p></p>
+    <div>
+        <input type="text" id="miTexto" placeholder="Escribe algo aqui" />
+        <button onClick="mostrarTexto()" type="button" class="btn btn-outline-info">Enviar</button>
+        <script>
+            function mostrarTexto() {
+                var texto = document.getElementById("miTexto").value;
+                alert("Mi nombre es Galo, mi hobbie es jugar futbol y el valor de mi campo es: " + texto);
+            }
+        </script>
+    </div>
+    
 </div>

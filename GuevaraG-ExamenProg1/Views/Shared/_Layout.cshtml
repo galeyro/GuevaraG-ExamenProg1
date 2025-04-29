@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GuevaraG_ExamenProg1</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Mi primer examen de programación 4 :D</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,15 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Reservas" asp-action="Index">Reservas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Recompensas" asp-action="Index">Recompensas</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -34,16 +43,7 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-        <div>
-            <input type="text" id="miTexto" placeholder="Escribe algo aqui" />
-            <button onClick="mostrarTexto()" type="button" class="btn btn-outline-info">Enviar</button>
-            <script>
-                function mostrarTexto() {
-                    var texto = document.getElementById("miTexto").value;
-                    alert("Mi nombre es Galo, mi hobbie es jugar futbol y el valor de mi campo es: " + texto);
-                }
-            </script>
-        </div>
+        
     </div>
 
     <footer class="border-top footer text-muted">
