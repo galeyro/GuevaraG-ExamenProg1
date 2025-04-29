@@ -8,6 +8,7 @@ namespace GuevaraG_ExamenProg1.Models
         public int Id { get; set; }
         [Required, MaxLength(50)]
         public string Nombre { get; set; }
+        [DataType(DataType.Date), Required]
         public DateTime FechaInicio { get; set; }
         public int Puntos { get; set; }
         public string Tipo { get; set; }

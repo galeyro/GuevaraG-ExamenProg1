@@ -4,6 +4,7 @@ using GuevaraG_ExamenProg1.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GuevaraG_ExamenProg1.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250429124654_Migracion V3")]
+    partial class MigracionV3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -118,7 +121,7 @@ namespace GuevaraG_ExamenProg1.Migrations
                     b.HasOne("GuevaraG_ExamenProg1.Models.Recompensa", "Recompensa")
                         .WithMany()
                         .HasForeignKey("RecompensasPuntos")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Recompensa");
@@ -129,7 +132,7 @@ namespace GuevaraG_ExamenProg1.Migrations
                     b.HasOne("GuevaraG_ExamenProg1.Models.Cliente", "Cliente")
                         .WithMany("Reservas")
                         .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
