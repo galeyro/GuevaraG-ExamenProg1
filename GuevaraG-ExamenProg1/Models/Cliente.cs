@@ -18,7 +18,7 @@ namespace GuevaraG_ExamenProg1.Models
         public int RecompensaId { get; set; }
         [ForeignKey("RecompensaId")]
         public Recompensa? Recompensa { get; set; }
-        public ICollection<Reserva> Reservas { get; set; }
+        public ICollection<Reserva> Reservas { get; set; } = new List<Reserva>();
 
     }
 }
